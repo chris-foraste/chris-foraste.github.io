@@ -8,14 +8,14 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="style.css">
-    <title>Chris M. Foraste: Avian Anarchy</title>
+    <title>Chris M. Foraste: Remotely Controlled Video Game</title>
 </head>
 <body>
     <header>
-        <h1>Avian Anarchy</h1>
+        <h1>RC Video Game</h1>
         <div class = "project-description">
             <p>
-                <em>For this project we were tasked with creating an entertaining robotic experience with which a middle-schooler could interact over Zoom</em>
+                <em>Using SPIKE Prime along with classic webpage design, my team produced a video game which middle schoolers could interact with over Zoom.</em>
         </div>
     </header>
   <section class="project grid-container">
@@ -24,16 +24,13 @@
     <div class="project-process grid-item">
         <h3>Project Description:</h3>
         <p>
-            For this project we decided to go with an Angry Birds themed wrecking ball game named Avian Anarchy. The game is controlled from a <a href = "https://firebasestorage.googleapis.com/v0/b/pyrepl.appspot.com/o/student-pyrepl-sites%2F7CLNNm5HlFcixBFl953wlz57auI3%2FEN1FinalProjectTest%2Fremote.html?alt=media&token=82f47d2d-2b74-4a21-a31f-d8f422c7a251">remote webpage.</a> From there, players can rotate and fire a lego robot in an attempt to knock down the towers scattered around the playing field.
+            For this project we decided to create an Angry Birds themed wrecking ball game named Avian Anarchy. The game is controlled from a <a href = "https://firebasestorage.googleapis.com/v0/b/pyrepl.appspot.com/o/student-pyrepl-sites%2F7CLNNm5HlFcixBFl953wlz57auI3%2FEN1FinalProjectTest%2Fremote.html?alt=media&token=82f47d2d-2b74-4a21-a31f-d8f422c7a251">remote webpage.</a> From there, players can rotate and fire a lego robot in an attempt to knock down the towers scattered around the playing field.
         </p>
         <h3>Process and Personal Contributions:</h3>
-        <p>I started this project focusing more on the mechanical aspects of the design. The main issue I personally focused on was cable management. Particularly with all of the spinning and movement the robot does, great care needed to be taken to ensure the cables remained untangled. This was most apparent in the bot rotation mechanism. Normally, we would place the motor on the ground and have that spin the baseplate above. However, for this we had to take an alternate approach where we had the motor attached to the upper portion, spinning against a baseplate clamped in place by a piece of wood. This allowed the cable to be safely threaded through the side of the frame. A similar problem occured with the cable connecting the hub and the local computer, where the cable would get caught and eventually be tangled as the bot rotates. I fixed this issue by building the antenna structure seen on the upper part of the robot, placing the cables directly over the axis of rotation as to minimize the impact of the robot spinning.<br>
-        <br>A lot of the code was created for us in advance, however some further coding was needed. I wrote the local code for the robot swing, creating the timings and angles to create a realistic swinging motion. The code for that can be seen in the "Local Code" section to the right. Unfortunately due to the remote nature of the project that alone was not enough. I had to make the code runnable from a webpage sending a command. Webpages use JS as their scripting language while SPIKE 3 uses MicroPython. Thus to make the project work, I had to create a JavaScript function that takes in the power parameter and then outputs a properly formatted python code to execute. This was tricky not due to the complexity of the code but rather the difficulty in maintaining proper syntax for both of the languages. I will admit, I got caught up for quite a bit by missing semicolons and variable delcarations in my JS as I had not used that language in a while. However I was eventually able to complete it, finishing the project prototype.<br><br>
-        During the protoype testing, we received the feedback that our product was unintuitive for users. To rectify this, we decided to make an instructions menu. With the help of the web developer bot, I created a single button that could open and close a menu. I also ensured that the text on the button in each state made sense to users. Finally, I used CSS to style the page, wrapping the controls in a clear background alongside enlarging the controls. I also used absolute positioning to place the button in the top right corner, making it's position clear and accessible for users.
-        <br>
-        <br>
-        <h3>Project Reflections:</h3>
-        <p>Overall this project was fairly difficult but I am glad we were able to pull this off. This project tested my knowledge of all of the main creation platforms we had used throughout the semester, those being LEGO building, MicroPython, and Webpage Design. I wish I was able to spread the responsibility a bit more, but due to the webpage design skills (especially JS) not being taught in depth to the class, this was not completely possible. I think our project finished in a very good state. If we had more time, I would have included the stopwatch feature as well as an on-webpage celebration that would let the players know they had completed the game.</p>
+        <p>I started this project focusing more on the mechanical aspects of the design. The main issue I personally focused on was cable management. Particularly with all of the spinning and movement the robot does, great care needed to be taken to ensure the cables remained untangled. This was most apparent in the bot rotation mechanism. Normally, we would place the motor on the ground and have that spin the baseplate above. However, for this we had to take an alternate approach where we had the motor attached to the upper portion, spinning against a base plate clamped in place by a piece of wood. This allowed the cable to be safely threaded through the side of the frame. A similar problem occurred with the cable connecting the hub and the local computer, where the cable would get caught and eventually be tangled as the bot rotated. I fixed this issue by building the antenna structure seen on the upper part of the robot, placing the cables directly over the axis of rotation as to minimize the impact of the robot spinning.<br>
+        <br>A lot of the code was created for us in advance, however some further coding was needed. I wrote the local code for the robot swing, creating the timings and angles to create a realistic swinging motion. The code for that can be seen in the "Local Code'' section to the right. Unfortunately due to the remote nature of the project that alone was not enough. I had to make the code runnable from a webpage sending a command. Webpages use JS as their scripting language while SPIKE 3 uses MicroPython. Thus to make the project work, I had to create a JavaScript function that takes in the power parameter and then outputs a properly formatted python code to execute. This was tricky not due to the complexity of the code but rather the difficulty in maintaining proper syntax for both of the languages. <br>
+        <br>During the prototype testing, we received the feedback that our product was unintuitive for users. To rectify this, we decided to make an instruction menu. With the help of an AI web developer bot, I created a single button that could open and close a menu. I also ensured that the text on the button in each state made sense to users. Finally, I used CSS to style the page, wrapping the controls in a clear background alongside enlarging the controls. I also used absolute positioning to place the button in the top right corner, making its position clear and accessible for users.<br>
+
     </div>
        
     <!-- Project Images -->
@@ -105,31 +102,12 @@ if (doc["shoot_command"] == "shoot") {
         
     </div>
 
-<script>
-    var slideIndex = 1;
-    showDivs(slideIndex);
-
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-
-    function showDivs(n) {
-        var i;
-        var x = document.getElementsByClassName("mySlides");
-        if (n > x.length) {slideIndex = 1} 
-        if (n < 1) {slideIndex = x.length} ;
-        for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
-        }
-        x[slideIndex-1].style.display = "inline";  
-    
-    }
-</script>
+<script src="slides.js"></script>
 
 </section>
     <footer>
       <p>Chris M. Foraste's EN 1 Portfolio</p>
-  </footer>
+    </footer>
 
 </body>
 
