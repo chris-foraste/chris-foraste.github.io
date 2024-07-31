@@ -1,0 +1,204 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+  }
+  
+  header {
+    /* background-color: #50b3a2; */
+    background-color: #1D2022;
+    color: #DFE1E2;
+    text-align: center;
+    padding: 1rem 0;
+    font-family: "Playfair Display";
+  }
+  
+  b, h3 {
+      font-family: "Playfair Display";
+  }
+  
+  h3{
+      text-align: center;
+      font-size: 1.5em;
+  }
+  
+  .slideshow{
+    float:center;
+    display: block;
+    padding-left:25%;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto; /* Center the image */
+    display: block;
+  }
+  
+  .projects {
+    padding: 1rem;
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 5px; /* Rounded corners for project background */
+  }
+  
+  .project-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px; /* Rounded corners for individual project */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for a lifted appearance */
+  }
+  
+  .project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-card .project-code {
+    background-color: #fff; /* Light grey background for code */
+    padding: 10px;
+    border-radius: 4px;
+  }
+  
+  .google-drive iframe {
+    border: none; /* Removes any default borders */
+    width: 100%; /* Makes iframe responsive with full width */
+    min-height: 400px; /* Ensures visibility */
+  }
+  
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  footer a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  button {
+    background-color: #50b3a2;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s; /* Smooth color transition */
+  }
+  
+  button:hover {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Creates 2 columns of equal width */
+    gap: 0px; /* Space between grid items */
+  }
+  
+  .grid-item {
+    background-color: #fff; /* Just for visualization */
+    padding: 16px;
+    border-radius: 0px;
+  }
+  
+  .project-description{
+      text-align: center;
+  }
+  
+  .project-process{
+      text-align: justify;
+      font-family: "Raleway", Sans-Serif;
+      background-color: #dfe1e2;
+      color: #1d2022;
+  }
+  
+  .project-images{
+      background-color: #cecfd0;
+  }
+  
+  img, iframe {
+          width: 300px;
+          height: 200px;
+      }
+  
+  .buttons {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      float: bottom;
+  }
+  
+  .slides{
+      font-style: italic;
+      text-align: center;
+      font-family: "Raleway", Sans-Serif;
+      color: #1d2022;
+  }
+  iframe{
+      padding-top: 2em;
+      border:none;
+      width: 600px;
+      height: 300px;
+      float: center;
+  }
+  
+  #imags{
+      padding:2em;
+      width: 90%;
+      text-align: center;
+  }
+  
+  .code-container {
+    width: 90%; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    overflow: auto; /* Adds scrollbars as necessary */
+    border: 1px solid #ddd; /* Optional: To visualize the box */
+    border-radius: 5px; /* Optional: For rounded corners */
+    padding: 1rem; /* Optional: For some space inside the box */
+    margin-bottom: 1rem; /* Optional: For some space below the box */
+    background-color: #333;
+    color: #fff;
+  
+  }
+  
+  .center-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .scrollable{
+      width: 95%;
+      height: 20em;
+      overflow:auto;
+      border: 1px solid #ddd; /* Optional: To visualize the box */
+      border-radius: 5px; /* Optional: For rounded corners */
+      padding: 1rem; /* Optional: For some space inside the box */
+      margin-bottom: 1rem; /* Optional: For some space below the box */
+      background-color: #cecfd0;
+  }
+  
+  .project-code {
+      padding-top: 4em;
+  }
+  
+  figcaption{
+      text-align: justify;
+      font-family: "Raleway", Sans-Serif;
+      color: #1d2022;
+  }
