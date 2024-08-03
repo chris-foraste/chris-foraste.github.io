@@ -242,3 +242,12 @@ color: white;
 .featured-project a{
   display: block;
 }
+
+footer a{
+  color: #cecfd0;
+  text-decoration: underline;
+}
+
+footer a:hover{
+  color: blue;
+}
