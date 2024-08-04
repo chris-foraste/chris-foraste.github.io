@@ -259,3 +259,8 @@ footer a:hover{
 .project-process p{
   text-align: justify;
 }
+
+.tall-video-div{
+  height: 89vw;
+  width: 50vw;
+}
