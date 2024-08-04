@@ -260,6 +260,7 @@ footer a:hover{
   text-align: justify;
 }
 
-.tall-video-div{
-  width: 20vw;
+.tall-video-div iframe{
+  width: 45vw;
+  height: 80vw;
 }
