@@ -1,0 +1,45 @@
+# site settings
+title: Christopher Foraste
+subtitle: Engineering Portfolio
+email: christopher.foraste@tufts.edu
+description: I'm an Electrical Engineering major at Tufts University who is passionate about applying mechanical and electrical design to develop next-generation systems. With my current electrical engineering education in combination with my previous mechanical courseowrk and internship, I can make an impact anywhere.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://chris-foraste.github.io" # the base hostname & protocol for your site
+author: Christopher Foraste
+street_address: 
+city: North Andover
+state: MA
+zip_code: 
+country: United States of America
+phone: (978) 447-0164
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings (key must match name of font awesome icon)
+# see https://fontawesome.com/icons?d=gallery&p=2&s=brands
+# Icons are not shown if value is empty
+# You need to restart jekyll for changes to have an effect
+socials:
+  GitHub:
+  GitLab:
+  Google-Plus:
+  Instagram:
+  LinkedIn: https://www.linkedin.com/in/cforaste
+  Twitter:
+  Facebook:
+  Slack:
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+- "*.gemspec"
+- LICENSE.md
+- CONTRIBUTING.md
+- README.md 
+- archive/

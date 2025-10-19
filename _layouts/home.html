@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+{% include head.html %}
+
+<body>
+
+    {% include header.html %}
+
+    <!-- Banner -->
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>{{ page.landing-title }}</h1>
+            </header>
+            <div class="content">
+                <p style="text-transform: uppercase;">{{ site.description }}</p>
+                <ul class="actions">
+                    <li><a href="/my-experience/" class="button next scrolly">My Experience</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main -->
+    <div id="main">
+
+        <!-- One 
+        {% include tiles.html %} -->
+
+    <section id="one" class="tiles">
+  
+  <article>
+    <span class="image">
+      <img src="assets/images/pic01.jpg" alt="Elements" />
+    </span>
+    <header class="major">
+      <h3><a href="/home/elements.html" class="link">Mechanical Projects</a></h3>
+      <p>Projects focusing on CAD and mechancial design</p>
+    </header>
+  </article>
+  
+  <article>
+    <span class="image">
+      <img src="assets/images/pic11.jpg" alt="Generic" />
+    </span>
+    <header class="major">
+      <h3><a href="/home/generic.html" class="link">Electrical Projects</a></h3>
+      <p>Projects in circuitry, software, and electromechanical systems</p>
+    </header>
+  </article>
+  
+  <article>
+    <span class="image">
+      <img src="assets/images/pic07.jpg" alt="Landing" />
+    </span>
+    <header class="major">
+      <h3><a href="/home/landing.html" class="link">Ongoing Projects</a></h3>
+      <p>See what I'm working on now.</p>
+    </header>
+  </article>
+  
+</section>
+
+    {% include footer.html %}
+
+</body>
+
+</html>
