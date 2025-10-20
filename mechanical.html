@@ -7,19 +7,19 @@ permalink: /mechanical/
 <header class="major">
     <h2>Mechanical Projects</h2>
 </header>
-    
+
+{% assign sorted_pages = site.pages | where_exp: "page", "page.category contains 'mechanical'" | sort: "priority" %}
+
 <section id="one" class="tiles">
-  {% for page in site.pages %}
-    {% if page.category contains "mechanical" %}
-      <article>
-        <span class="image" style="filter: saturate(1.5);">
-          <img src="{{ page.cover }}" alt="{{ page.title }}" />
-        </span>
-        <header class="major">
-          <h3><a href="{{ page.url }}" class="link">{{ page.title }}</a></h3>
-          <p>{{ page.excerpt }}</p>
-        </header>
-      </article>
-    {% endif %}
+  {% for page in sorted_pages %}
+    <article>
+      <span class="image" style="filter: saturate(1.5);">
+        <img src="{{ page.cover }}" alt="{{ page.title }}" />
+      </span>
+      <header class="major">
+        <h3><a href="{{ page.url }}" class="link">{{ page.title }}</a></h3>
+        <p>{{ page.excerpt }}</p>
+      </header>
+    </article>
   {% endfor %}
 </section>
