@@ -1,0 +1,28 @@
+---
+layout: page
+title: Electrical Projects
+permalink: /electrical/
+---
+
+<header class="major">
+    <h2>Electrical Projects</h2>
+</header>
+    
+<section id="one" class="tiles">
+  {% for page in site.pages %}
+    {% if page.category contains "electrical" %}
+      <article>
+        <span class="image" style="filter: saturate(1.5);">
+          <img src="{{ page.cover }}" alt="{{ page.title }}" />
+        </span>
+        <header class="major">
+          <h3><a href="{{ page.url }}" class="link">{{ page.title }}</a></h3>
+          <p>{{ page.excerpt }}</p>
+        </header>
+      </article>
+    {% endif %}
+  {% endfor %}
+</section>
+
+
+  
