@@ -68,17 +68,20 @@
   			{% if page.cover %}
     			<img src="{{ page.cover }}" alt="" class="responsive-image" />
   			{% endif %}
-
+			{% if page.projectsummary %}
   			<div class="responsive-summary">
     			<h4>Project Summary:</h4>
     			{{ page.projectsummary }}
-    			<h4 style="padding-top: 1em;">Key Skills:</h4>
-    			<ul>
-      				{% for skill in page.skills %}
-        				<li>{{ skill }}</li>
-      				{% endfor %}
+				{% if page.skills %}
+    				<h4 style="padding-top: 1em;">Key Skills:</h4>
+    				<ul>
+      					{% for skill in page.skills %}
+        					<li>{{ skill }}</li>
+      					{% endfor %}
     			</ul>
+				{% endif %}
   			</div>
+			{% endif %}
 		</div>
 
 	</section>
