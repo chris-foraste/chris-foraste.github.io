@@ -11,7 +11,30 @@
 <body>
     <script type="text/javascript">document.body.classList.add("is-loading");</script>
 
-    {% include header.html %} {{ content }} {% include footer.html %}
+    {% include header.html %} 
+
+	<!-- Main -->
+<div id="main" class="alt">
+
+	<!-- One -->
+	<section id="one">
+		<div class="inner" style="width: 80%; margin: 0 auto;">
+			<header class = "major" style="min-width: 100%; margin-bottom: 0;">
+				<div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; row-gap: 0.5em;">
+  					<h1 style="float: left; margin: 0;">{{ page.title }}</h1>
+  					{% if page.dates %}<h4 style="float: right; margin: 0;">Project Timeline: {{ page.dates }} {% if page.lastedited %}| Last Edited: {{ page.lastedited}} {% endif %} </h4>{% endif %}
+				</div>
+			</header>
+
+			
+			{% if page.cover %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.cover }}" alt="" /></span>{% endif %}
+			{{ content }}
+		</div>
+	</section>
+
+</div>
+
+	{% include footer.html %}
 
 </body>
 

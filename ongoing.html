@@ -3,11 +3,12 @@ layout: page
 title: Ongoing Projects
 permalink: /ongoing/
 ---
-
+<!--
 <header class="major">
     <h2>Electrical Projects</h2>
 </header>
-    
+-->
+
 {% assign sorted_pages = site.pages | where_exp: "page", "page.category contains 'ongoing'" | sort: "priority" %}
 
 <section id="one" class="tiles">
