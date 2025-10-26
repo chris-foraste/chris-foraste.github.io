@@ -7,6 +7,42 @@
 <html>
 
 {% include head.html %}
+<head>
+	<style>
+		.responsive-container {
+  			display: flex;
+  			flex-direction: column;
+  			align-items: center;
+ 		 	gap: 1em;
+  			width: 90%;
+  			max-width: 1200px;
+  			margin: 0 auto;
+			padding-bottom: 3em;
+		}
+
+		.responsive-image,
+		.responsive-summary {
+  		width: 100%;
+		}
+
+		.responsive-summary{
+			border: 2px solid white; padding: 1%;
+		}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .responsive-image,
+  .responsive-summary {
+    width: 45%;
+  }
+}
+	</style>
+</head>
 
 <body>
     <script type="text/javascript">document.body.classList.add("is-loading");</script>
@@ -26,10 +62,28 @@
 				</div>
 			</header>
 
-			
-			{% if page.cover %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.cover }}" alt="" /></span>{% endif %}
-			{{ content }}
 		</div>
+
+		<div class="responsive-container">
+  			{% if page.cover %}
+    			<img src="{{ page.cover }}" alt="" class="responsive-image" />
+  			{% endif %}
+
+  			<div class="responsive-summary">
+    			<h4>Project Summary:</h4>
+    			{{ page.projectsummary }}
+    			<h4 style="padding-top: 1em;">Key Skills:</h4>
+    			<ul>
+      				{% for skill in page.skills %}
+        				<li>{{ skill }}</li>
+      				{% endfor %}
+    			</ul>
+  			</div>
+		</div>
+
+	</section>
+	<section>
+		{{ content }}
 	</section>
 
 </div>
