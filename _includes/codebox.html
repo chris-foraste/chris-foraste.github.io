@@ -1,0 +1,20 @@
+<head>
+    <style>
+        .code-container{
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1rem;
+            background-color: #000;
+            color: #fff;
+            margin: 2em;
+        }
+    </style>
+</head>
+
+<div class="code-container" style="width: {{ include.code_width }}; max-width:100%; height: {{ include.code_height}};  overflow: auto;">
+    <pre>
+        <code>
+            {% include code/{{ include.code}} %}
+        </code>
+    </pre>
+</div>
