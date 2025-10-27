@@ -1,0 +1,77 @@
+<head>
+    <style>
+        .slideshow{
+            display: block;
+        }
+
+        figcaption{
+            text-align: center;
+        }
+
+        .slides{
+            text-align: center;
+        }
+
+        .iframe{
+            padding-top: 2em;
+            border: none;
+        }
+
+        .gallery_wrapper{
+            margin: 2em;
+        }
+
+        .buttons{
+            margin-top: 1em;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<div class="gallery_wrapper" style = "max-width:100%;">
+    <div class="slideshow">
+        {% for item in include.media %}
+            <div class="mySlides" style="display:none; max-width:100%;">
+                <figure style = "width: {{ include.item_width }}; max-width: 100%">
+                    {% if item.type == "image" %}
+                        <img class="slideItem" src="{{ item.link }}" style="height: {{ include.item_height }};" />
+                    {% endif %}
+                    {% if item.type == "iframe" %}
+                        <iframe class="slideItem" src="{{ item.link }}" style="height: {{ include.item_height }};"></iframe>
+                    {% endif %}
+                    {% if item.type == "video" %}
+                        <video controls style="height: {{ include.item_height }};">
+                            <source class = "slideItem" src="{{item.link}}" type=video/mp4>
+                        </video>
+                    {% endif %}
+                    <figcaption> {{item.caption}} </figcaption>
+                </figure>
+            </div>
+        {% endfor %}
+    </div>
+    <div class="buttons" style = "width: {{ include.item_width }}; max-width:100%;">
+        <button style="float:left" onclick="plusDivs(-1)">Previous</button>
+        <button style="float:right" onclick="plusDivs(1)">Next</button>
+    </div>
+</div>
+
+<script>
+    var slideIndex = 1;
+    showDivs(slideIndex);
+
+    function plusDivs(n) {
+        showDivs(slideIndex += n);
+    }
+
+    function showDivs(n) {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        if (n > x.length) {slideIndex = 1} 
+        if (n < 1) {slideIndex = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        x[slideIndex-1].style.display = "inline";  
+    
+    }
+</script>
