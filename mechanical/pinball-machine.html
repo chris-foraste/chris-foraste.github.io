@@ -10,4 +10,20 @@ dates: Spring 2022
 lastedited: 10/26/2025
 projectsummary: "For my final project for my high school Intro to Engineering class, I built a functioning pinball machine. This combined knowledge of 3D-printing, carpentry, electrical design, and programming. Photoresistors were used to track the ball's location and update the scoreboard accordingly."
 skills: [Sensor Design, Microcontrollers, Carpentry, 3D Printing]
+photogallery:
+    - link: "https://youtube.com/embed/2Pb8n-vVCdU"
+      type: "iframe"
+      caption: "Project Demonstration Video"
+    - link: /assets/images/Flipper.png
+      type: "image"
+      caption: "Engineering Drawing of the Flippers"
 ---
+
+<div class = "responsive-container">
+    <div class="responsive-image">
+        {% include photo_gallery.html media=page.photogallery item_width="100%" item_height="300px" %}
+    </div>
+    <div class="responsive-summary" style="margin-top: 3rem;">
+        <p>This was the first ever large scale project I undertook. Working with a partner, I developed all of the components of the system including the rubber band launcher, the wooden frame, the sensing system, and the Arduino circuit. As normal pinball switches are fairly expensive and difficult to make, I substituted in photoresistors that calibrated on the program starting to track the ball's motion. Unfortunately, I don't have any detailed documentation of particular components of the project due to having lost the files once I graduated high school.</p>
+    </div>
+</div>
