@@ -8,6 +8,74 @@ cover:  /assets/images/DistanceSensor.png
 priority: 2
 dates: September - October 2025
 lastedited: 10/26/2025
-projectsummary: "For my EE 31: Junior Design Project class, I was responsible for designing a custom distance sensor utilizing infrared LEDs and phototransistors to detect upcoming objects, thereby preventing collisions. I tightly calibrated it to black walls, but was able to switch it to sense white walls when the project requirements changed. As a result, the robot is able to successfully avoid collisions."
+projectsummary: "For my EE 31: Junior Design Project class, I was responsible for designing a custom distance sensor utilizing infrared LEDs and phototransistors to detect upcoming objects, thereby preventing collisions."
 skills: [Sensor Design, Circuit Design, Adaptability]
+
+photogallery:
+    - link: /assets/images/pic01.jpg
+      type: "image"
+      caption: "Imag1"
+    - link: /assets/images/GeneralPrinciple.png
+      type: "image"
+      caption: "General Principle of the Circuit"
+    - link: /assets/images/JuniorDesignSchematic.png
+      type: "image"
+      caption: "Schematic of the Completed Circuit"
+    - link: /assets/images/LEDHolder.png
+      type: "image"
+      caption: "Section View of Sensor Casing in SolidWorks"
 ---
+<head>
+	<style>
+		.responsive-container {
+  			display: flex;
+  			flex-direction: column;
+  			align-items: center;
+ 		 	gap: 1em;
+  			width: 90%;
+  			max-width: 1200px;
+  			margin: 0 auto;
+			padding-bottom: 3em;
+		}
+
+		.responsive-image,
+		.responsive-summary {
+  		width: 100%;
+		}
+
+		.responsive-summary{
+			border: 2px solid white; padding: 1%;
+            margin-top: 3%;
+		}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .responsive-image,
+  .responsive-summary {
+    width: 45%;
+  }
+}
+	</style>
+</head>
+
+
+<div class = "responsive-container">
+    <div class="responsive-image">
+        {% include photo_gallery.html media=page.photogallery item_width="100%" item_height="300px" %}
+    </div>
+    <div class="responsive-summary">
+        <p>This sensor works by taking advantage of the non-linearity of the phototransistors to implement background subtraction. The robot has two copies of the same core sensing system implemented at different distances from the robot. This way, the one further out senses while the one further behind implements background subtraction. This ensures that the robot behaves appropriately regardless of orientation or light level. A moving average filter is implemented within the code to reduce noise.</p>
+    </div>
+</div>
+<div class="part2" style="width: 80%; margin: 0 auto;">
+    
+    <h4>DistanceSensor.h</h4>
+    {% include codebox.html code="distancesensor.h" code_width="100%" code_height="600px" %}
+    <h4>DistanceSensor.cpp</h4>
+    {% include codebox.html code="distancesensor.cpp" code_width="100%" code_height="600px" %}
+</div>
