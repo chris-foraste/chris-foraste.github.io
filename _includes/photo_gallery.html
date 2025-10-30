@@ -37,7 +37,7 @@
                         <img class="slideItem" src="{{ item.link }}" style="height: {{ include.item_height }};" />
                     {% endif %}
                     {% if item.type == "iframe" %}
-                        <iframe class="slideItem" src="{{ item.link }}" style="height: {{ include.item_height }};"></iframe>
+                        <iframe class="slideItem" src="{{ item.link }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="height: {{ include.item_height }}; width: {{ include.item_width }}; max-width: 100%;"></iframe>
                     {% endif %}
                     {% if item.type == "video" %}
                         <video controls style="height: {{ include.item_height }};">

@@ -12,17 +12,40 @@ skills: [PCB Design, Machine Shop Manufacturing, Stepper Motors]
 priority: 6
 
 photogallery:
-    - link: /assets/images/pic01.jpg
+    - link: "https://youtube.com/embed/p7-yE_D0qtA?si=gZ39qRn0r50N1HB8"
+      type: "iframe"
+      caption: "Project Demonstration Video"
+    - link: /assets/images/Tilting Table Maze Schematic.png
       type: "image"
-      caption: "Imag1"
-    - link: /assets/images/pic02.jpg
+      caption: "Overall Schematic"
+    - link: /assets/images/Voltage Regulator Schematic.png
       type: "image"
-      caption: "Imag1"
-    - link: /assets/images/pic03.jpg
+      caption: "Voltage Regulator Schematic"
+    - link: /assets/images/Voltage Regulator PCB.png
       type: "image"
-      caption: "Imag3"
+      caption: "Voltage Regulator PCB"
+    - link: /assets/images/H Bridge Schematic.png
+      type: "image"
+      caption: "H-Bridge Schematic"
+    - link: /assets/images/HBridgePCB.png
+      type: "image"
+      caption: "H-Bridge PCB"
 ---
 
-{% include photo_gallery.html media=page.photogallery item_width="500px" item_height="300px" %}
+<div class = "responsive-container">
+    <div class="responsive-image">
+        {% include photo_gallery.html media=page.photogallery item_width="100%" item_height="300px" %}
+    </div>
+    <div class="responsive-summary" style="margin-top: 3rem;">
+        <p>This project utilizes 2 PCBs I previously designed and soldered - a voltage regulator to provide clean power to the KB 2040 and an H-bridge to drive the stepper motors. Both PCBs were augmented to enable barrel jack inputs and LEDs to visualize current flow. <br> Numerous construction techniques were used to manufacture the maze, including a chop saw, SOLIDWORKS, 3D Printing, laser cutter, robotic tap, jump shear, rivet gun, drill press, v-bender, and power drill. </p>
+    </div>
+</div>
+<div class="part2" style="width: 80%; margin: 0 auto;">
+    <h4>Code</h4>
+    <p>This code was designed with usability in mind as it sought to balance the user's desire for ease of control with the mechanical desire to constrain the rotation of the pulleys as to not ram the maze into the ceiling or the floor (this was a frequent issue during usability testing). <br> <br>
+After all the pins are assigned, the code consists of a state machine which allows the spools to operate independently of each other, allowing for more natural control and greater freedom in terms of movement. <br> <br>
+This rotation is then tracked internally, and if the user attempts to turn the spool further, the motor simply will not receive an input, causing the user to reverse course. I predicted that this system might not work consistently all of the time and so I added in a failsafe button which can be pressed to allow three seconds to reset the spools to a neutral position before tracking restarts.</p>
+    {% include codebox.html code="tilting_table.py" code_width="100%" code_height="600px" %}
+</div>
 
-{% include codebox.html code="tilting_table.py" code_width="500px" code_height="600px" %}
+

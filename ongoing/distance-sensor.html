@@ -7,14 +7,14 @@ excerpt: Designed a robust distance sensor from discrete components to prevent r
 cover:  /assets/images/DistanceSensor.png
 priority: 2
 dates: September - October 2025
-lastedited: 10/26/2025
+lastedited: 10/29/2025
 projectsummary: "For my EE 31: Junior Design Project class, I was responsible for designing a custom distance sensor utilizing infrared LEDs and phototransistors to detect upcoming objects, thereby preventing collisions."
 skills: [Sensor Design, Circuit Design, Adaptability]
 
 photogallery:
-    - link: /assets/images/pic01.jpg
-      type: "image"
-      caption: "Imag1"
+    - link: "https://www.youtube.com/embed/tXNh1LYxU0o?si=X0B0y_XzDJ9drauL"
+      type: "iframe"
+      caption: "Demonstration - Drive Straight until Wall"
     - link: /assets/images/GeneralPrinciple.png
       type: "image"
       caption: "General Principle of the Circuit"
@@ -25,50 +25,12 @@ photogallery:
       type: "image"
       caption: "Section View of Sensor Casing in SolidWorks"
 ---
-<head>
-	<style>
-		.responsive-container {
-  			display: flex;
-  			flex-direction: column;
-  			align-items: center;
- 		 	gap: 1em;
-  			width: 90%;
-  			max-width: 1200px;
-  			margin: 0 auto;
-			padding-bottom: 3em;
-		}
-
-		.responsive-image,
-		.responsive-summary {
-  		width: 100%;
-		}
-
-		.responsive-summary{
-			border: 2px solid white; padding: 1%;
-            margin-top: 3%;
-		}
-
-@media (min-width: 768px) {
-  .responsive-container {
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
-  .responsive-image,
-  .responsive-summary {
-    width: 45%;
-  }
-}
-	</style>
-</head>
-
 
 <div class = "responsive-container">
     <div class="responsive-image">
         {% include photo_gallery.html media=page.photogallery item_width="100%" item_height="300px" %}
     </div>
-    <div class="responsive-summary">
+    <div class="responsive-summary" style="margin-top: 3rem;">
         <p>This sensor works by taking advantage of the non-linearity of the phototransistors to implement background subtraction. The robot has two copies of the same core sensing system implemented at different distances from the robot. This way, the one further out senses while the one further behind implements background subtraction. This ensures that the robot behaves appropriately regardless of orientation or light level. A moving average filter is implemented within the code to reduce noise.</p>
     </div>
 </div>
