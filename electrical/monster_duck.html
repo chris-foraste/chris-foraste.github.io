@@ -10,4 +10,37 @@ dates: November - December 2024
 lastedited: 10/26/2025
 projectsummary: "For the final project for my electronics class (ME 30), I was in a group of two other mechanical engineers and tasked with creating a fully autonomous robot that can collaborate with other groups' robots to push a large tube up a set of ramps. This required a combination of strong mechanical, electrical, and programming skills."
 skills: [Microcontrollers, Flask Integration, PCB Design]
+photogallery:
+    - link: "https://youtube.com/embed/5OSYC8dZBeE"
+      type: "iframe"
+      caption: "Project Demonstration Video"
+    - link: /assets/images/MonsterTruck.png
+      type: "image"
+      caption: "CAD Model of Robot"
+    - link: /assets/images/Voltage Regulator Schematic.png
+      type: "image"
+      caption: "Voltage Regulator Schematic"
+    - link: /assets/images/Voltage Regulator PCB.png
+      type: "image"
+      caption: "Voltage Regulator PCB"
+    - link: /assets/images/H Bridge Schematic.png
+      type: "image"
+      caption: "H-Bridge Schematic"
+    - link: /assets/images/HBridgePCB.png
+      type: "image"
+      caption: "H-Bridge PCB"
 ---
+
+<div class = "responsive-container">
+    <div class="responsive-image">
+        {% include photo_gallery.html media=page.photogallery item_width="100%" item_height="300px" %}
+    </div>
+    <div class="responsive-summary" style="margin-top: 3rem;">
+        <p>Throughout this project, we divided up the tasks based on our personal strengths. As I felt particularly skilled with the electronics content taught in the course, I took the lead on developing the local code (both for the driving and sensing subsystems) while also handling the wiring for the driving and power subsystems. It was actually easier than the tilting table maze which I had done earlier in the course. I also assisted in developing the communication code through pair programming and debugging. The other two members of the group, Leia and Vanessa, focused on internet-connected programming and the mechanical design of the sensing system respectively.</p>
+    </div>
+</div>
+<div class="part2" style="width: 80%; margin: 0 auto;">
+    <h4>Code</h4>
+    <p>This code block shows all of the code running on the Raspberry Pi, using the Flask framework. (The remaining code is simply an HTML webpage with a start button). I worked on the whole file and personally wrote the code up until the negotiation functions with the exception of several variable declarations used later on. An important feature I implemented was the control system which enabled the robot to adjust its speed in response to changes in pressure from the tube.  Its design also makes it resistant to false alarms, as the sensitivity can be increased and the robot will ignore readings where both halves of the panel are triggered</p>
+    {% include codebox.html code="monsterduck.py" code_width="100%" code_height="600px" %}
+</div>

@@ -11,3 +11,37 @@ lastedited: 10/26/2025
 projectsummary: "For the final project of my Simple Robotics class, my group and I created a web-integrated robotic game. I focused on both the mechanical and software aspects of the project. I first constructed a cable management system to ensure that the cables leading from the hub to the parts wouldn't get twisted as the robot rotated. I also coded the code for a satisfying swinging motion on the local side. Finally, I integrated the local behavior onto the web by using a combination of Javascript and MicroPython."
 skills: [Microcontrollers, Flask Integration, PCB Design]
 ---
+
+<div class = "responsive-container">
+    <div class="responsive-image">
+        <iframe class="slideItem" src="https://youtube.com/embed/byHCKUI8SIw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="height: 500px; width: 100%; max-width: 100%;"></iframe>
+    </div>
+    <div class="responsive-summary" style="margin-top: 3rem;">
+        <p>For the final project of my Simple Robotics class, my group and I created a web-integrated robotic game. I focused on both the mechanical and software aspects of the project. I first constructed a cable management system to ensure that the cables leading from the hub to the parts wouldn't get twisted as the robot rotated. I also coded the code for a satisfying swinging motion on the local side. Finally, I integrated the local behavior onto the web by using a combination of Javascript and MicroPython.</p>
+    </div>
+</div>
+<div class="part2" style="width: 80%; margin: 0 auto;">
+    <h4>Code Overview</h4>
+    <p>A lot of the code was created for us in advance, however some further coding was needed. I wrote the local code for the robot swing, creating the timings and angles to create a realistic swinging motion. The code for that can be seen in the "Local Code" section above. Unfortunately due to the remote nature of the project that alone was not enough. I had to make the code runnable from a webpage sending a command. Webpages use JS as their scripting language while SPIKE 3 uses MicroPython. Thus to make the project work, I had to create a JavaScript function that takes in the power parameter and then outputs a properly formatted python code to execute. This was tricky not due to the complexity of the code but rather the difficulty in maintaining proper syntax for both of the languages. I will admit, I got caught up for quite a bit by missing semicolons and variable delcarations in my JS as I had not used that language in a while. However I was eventually able to complete it, finishing the project prototype.        
+<br><br>
+During the protoype testing, we received the feedback that our product was unintuitive for users. To rectify this, we decided to make an instructions menu. With the help of the web developer bot, I created a single button that could open and close a menu. I also ensured that the text on the button in each state made sense to users. Finally, I used CSS to style the page, wrapping the controls in a clear background alongside enlarging the controls. I also used absolute positioning to place the button in the top right corner, making it's position clear and accessible for users.</p>
+    
+    <h4>Key Javascript Code</h4>
+    {% include codebox.html code="swing_func.js" code_width="100%" code_height="600px" %}
+
+    <h4>Local HTML</h4>
+        {% capture rawcodelocal %}
+            {% include code/local.html %}
+        {% endcapture %}
+        <div class="code-container" style="width: 100%; max-width:100%; height: 600px; overflow: auto;">
+            <pre><code>{{ rawcodelocal | escape }}</code></pre>
+        </div>
+
+    <h4>Remote HTML</h4>
+        {% capture rawcoderemote %}
+            {% include code/remote.html %}
+        {% endcapture %}
+        <div class="code-container" style="width: 100%; max-width:100%; height: 600px; overflow: auto;">
+        <pre><code>{{ rawcoderemote | escape }}</code></pre>
+    </div> 
+</div>

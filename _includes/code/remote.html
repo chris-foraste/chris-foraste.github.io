@@ -1,0 +1,37 @@
+<html><head>
+    <script type="module" src="https://firebasestorage.googleapis.com/v0/b/pyrepl.appspot.com/o/student-pyrepl-sites%2F1FEk0oSq2EhQ8IfvtPOtr1R4qxY2%2FAvianAnarchy%2Fconnection.js?alt=media&amp;token=c6158981-a4a2-444a-b6c0-ddee8bf5567d"></script> 
+    <script type="text/javascript" src="https://firebasestorage.googleapis.com/v0/b/pyrepl.appspot.com/o/student-pyrepl-sites%2F7CLNNm5HlFcixBFl953wlz57auI3%2FEN1FinalProjectTest%2Fremote.js?alt=media&amp;token=b30f88e9-1830-4f18-90c5-81163f1332d8"></script> 
+    <link rel="stylesheet" href="https://firebasestorage.googleapis.com/v0/b/pyrepl.appspot.com/o/student-pyrepl-sites%2F7CLNNm5HlFcixBFl953wlz57auI3%2FEN1FinalProjectTest%2Fstyle.css?alt=media&amp;token=70a5da76-d7e2-4aad-bad3-845ffbe3e0f4"> 
+</head>
+<body>
+    <div id="banner">
+        <h1>Avian Anarchy</h1>
+
+    
+        <p>
+            <b>Angle:</b>
+            <input type="range" min="-90" max="90" value="0" id="shoot_angle" onchange="update_angle(this.value);">
+            <button onclick="update_command(&quot;angle&quot;)">AIM</button>
+        </p>
+
+        <p>
+            <b>Power:</b>
+            <input type="range" min="100" max="1000" step="10" value="500" id="shoot_power" onchange="update_power(this.value);">
+            <button onclick="update_command(&quot;shoot&quot;)">SHOOT</button>
+        </p>
+
+        <button style="position: absolute; top: 0; right: 0;" id="toggleButton" onclick="toggleMenu()">Instructions</button>
+    </div>
+    <div id="menu">
+        <h1 style="text-align: center;">How To Play</h1>
+        <p id="instructions">The evil king Reginald and his minion pigs have built large towers surrounding the bird nest and they want their revenge. The birds have gathered their resources to construct a wrecking ball bird to knock these towers down. They need your help to destroy all of them before their nest gets taken over. <br><br>
+
+Use the aim slider to adjust how far you want to rotate the wrecking ball. The blue arrow on the top-down view will show you where the tower is pointing. When you are ready to rotate, hit the aim button. Use the power slider to adjust how strong you want the wrecking ball to be. The further you move the slider forward, the faster the wrecking ball will move. Once, you are ready to fire, hit the shoot button. <br><br>
+
+Once all 5 towers are knocked down, you win! 
+</p>
+    </div>
+    
+
+
+</body></html>
